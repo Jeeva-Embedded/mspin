@@ -12,23 +12,16 @@ Timer Prescaler: Set to 149 to achieve a 1 µs timer tick.
 Timer Period: Set to 19999 for a 20 ms interrupt period.
 Timer Interrupt Configuration
 TIM2 with the following parameters:
-
 **Calculation**
- * Timer clock = SystemCoreClock = 150MHz
- * Desired interrupt period = 20ms = 0.02s
- *
- * To get 20ms:
- * prescaler of 150
- *    Timer tick = 1/(150MHz/150) = 1μs
- *
- *
- *    Counter period = 20ms/1μs = 20,000 counts
- *
- * Therefore:
- * Prescaler = 150 - 1 = 149 register value
- * Counter period = 20000 - 1 = 19999 register value
-
- 
+Timer clock = SystemCoreClock = 150MHz
+Desired interrupt period = 20ms = 0.02s
+To get 20ms:
+prescaler of 150
+Timer tick = 1/(150MHz/150) = 1μs
+Counter period = 20ms/1μs = 20,000 counts
+Therefore:
+Prescaler = 150 - 1 = 149 register value
+Counter period = 20000 - 1 = 19999 register value
 Prescaler: 149
 Period: 19999
 Interrupt Period: 20 ms
